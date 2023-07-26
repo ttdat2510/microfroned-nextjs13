@@ -11,7 +11,8 @@
   "scripts": {
     "start": "concurrently \"npm --prefix checkout run dev\" \"npm --prefix home run dev\" \"npm --prefix shop run dev\"",
     "build": "concurrently \"npm --prefix checkout run build\" \"npm --prefix home run build\" \"npm --prefix shop run build\"",
-    "serve": "concurrently \"npm --prefix checkout run start\" \"npm --prefix home run start\" \"npm --prefix shop run start\""
+    "serve": "concurrently \"npm --prefix checkout run start\" \"npm --prefix home run start\" \"npm --prefix shop run start\"",
+    "reset": "concurrently \"cd shared && rm -rf node_modules && yarn \" \"rm -rf node_modules && rm -rf .next && yarn \" \"cd checkout && rm -rf node_modules && rm -rf .next && yarn \" \"cd home && rm -rf node_modules && rm -rf .next && yarn \" \"cd shop && rm -rf node_modules && rm -rf .next && yarn \" "
   },
   "dependencies": {
     "concurrently": "7.6.0"
